@@ -103,10 +103,3 @@ CONFIGURE_FILE(
   IMMEDIATE @ONLY)
 ADD_CUSTOM_TARGET(uninstall
   "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/CMakeModules/cmake_uninstall.cmake")
-
-
-# set include directories
-target_include_directories(divsufsort PUBLIC {CMAKE_CURRENT_BINARY_DIR}/include)
-if(BUILD_DIVSUFSORT64)
-    target_include_directories(divsufsort64 PUBLIC {CMAKE_CURRENT_BINARY_DIR}/include)
-endif()
